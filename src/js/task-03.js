@@ -14,19 +14,30 @@ const images = [
 ];
 
 
-const photoGallery = document.querySelector('.gallery');
-photoGallery.style.listStyle = "none";
-const markImg = ((images) => {
-  return images.map((image) => {
-    const markImgEl = document.createElement("li");
-    markImgEl.insertAdjacentHTML("beforeend", "<img>");
-    markImgEl.firstChild.src = image.url;
-    markImgEl.firstChild.alt = image.alt;
-    markImgEl.firstChild.style.width = "370px"
-    return markImgEl;
-  });  
-});
-const img = markImg(images);
-photoGallery.append(...img);
+// const photoGallery = document.querySelector('.gallery');
+// photoGallery.style.listStyle = "none";
+// const markImg = ((images) => {
+//   return images.map((image) => {
+//     const markImgEl = document.createElement("li");
+//     markImgEl.insertAdjacentHTML("beforeend", "<img>");
+//     markImgEl.firstChild.src = image.url;
+//     markImgEl.firstChild.alt = image.alt;
+//     markImgEl.firstChild.style.width = "370px"
+//     return markImgEl;
+//   });  
+// });
+// const img = markImg(images);
+// photoGallery.append(...img);
 
+const galleryList = document.querySelector(".gallery");
+galleryList.style.listStyle = "none";
+const elements = images
+  .map(
+    ({ url, alt }) =>
+      `<li><img class='image' src='${url}' alt='${alt}' width='300'></li>`
+  )
+  .join("");
+console.log(elements);
+galleryList.insertAdjacentHTML("beforeend", elements);
 
+111111
