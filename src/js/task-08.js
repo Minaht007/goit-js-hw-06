@@ -19,7 +19,8 @@ function onFormSubmit(event) {
         alert("Всі поля повинні бути заповнені!");
     } else {
         console.log(formData);
+        formEl.reset();
     }
 
-        formEl.reset();
+        
 }

@@ -13,7 +13,6 @@ for (const ingredient of ingredients) {
   const li = document.createElement("li")
   li.textContent = ingredient
   li.classList.toggle("item")
-    ul.append(li) 
-  // li.prepend('ingredient')
+    ul.append(li)   
 }
 console.dir(ul)

@@ -40,4 +40,3 @@ const elements = images
 console.log(elements);
 galleryList.insertAdjacentHTML("beforeend", elements);
 
-111111
